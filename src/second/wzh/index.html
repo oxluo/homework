@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>无标题文档</title>
+</head>
+
+<body>
+
+	<div>
+		<h1>注册</h1>
+        <div>
+   			<form action="register.php" method="post">
+        		用户名<input type="text" name="registerName" /><br />
+                密码<input type="password" name="registerPassword" /> <br />
+        		确认密码<input type="password" name="confirmPassword" /> <br />
+                <input type="submit" name="register" value="注册"/><br />
+        	</form>
+        </div>
+    </div>
+    <br />
+    <div>
+    	<h1>登陆</h1>
+    	<div>
+        	<form action="login.php" method="post">
+				<input type="hidden" name="encoded" value="0">
+	            <input type="text" name="token" value= "<?php echo $_SESSION['token']?>" />
+            	用户名<input type="text" name="loginName" /> <br />
+                密码<input type="password" name="loginPassword" /> <br />
+                <input type="submit" name="login" value="登陆" /> <br />
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
